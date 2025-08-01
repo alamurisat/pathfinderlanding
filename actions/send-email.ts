@@ -40,7 +40,7 @@ export async function sendContactEmail(formData: FormData) {
           
           <div style="background-color: #ffffff; padding: 20px; border: 1px solid #e5e7eb; border-radius: 8px;">
             <h3 style="margin-top: 0; color: #374151;">Message</h3>
-            <p style="white-space: pre-wrap; line-height: 1.6;">${message}</p>
+            <p style="white-space: pre-wrap; line-height: 1.6;">${message.replace(/</g, "&lt;").replace(/>/g, "&gt;")}</p>
           </div>
           
           <div style="margin-top: 20px; padding: 15px; background-color: #dbeafe; border-radius: 8px;">
@@ -72,7 +72,7 @@ export async function sendContactEmail(formData: FormData) {
             <p><strong>Subject:</strong> ${subject}</p>
             <p><strong>Category:</strong> ${category}</p>
             <p><strong>Message:</strong></p>
-            <p style="white-space: pre-wrap; line-height: 1.6; font-style: italic;">${message}</p>
+            <p style="white-space: pre-wrap; line-height: 1.6; font-style: italic;">${message.replace(/</g, "&lt;").replace(/>/g, "&gt;")}</p>
           </div>
           
           <p>In the meantime, feel free to explore our resources:</p>
