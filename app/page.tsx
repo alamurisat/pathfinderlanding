@@ -1,7 +1,5 @@
-"use client"
+import PathfinderLanding from "../page"
 
-import { useSidebar } from "../ui/sidebar"
-
-export default function SyntheticV0PageForDeployment() {
-  return <useSidebar />
+export default function Page() {
+  return <PathfinderLanding />
 }
